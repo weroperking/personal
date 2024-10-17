@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mohamed Khaled</title>
+  <title>Mohamed Khaled - Portfolio</title>
   <link rel="icon" href="./logo.png" type="image/x-icon">
   <style>
     body {
@@ -12,7 +12,6 @@
       padding: 0;
       background: #000;
       color: #eaeaea;
-      line-height: 1.6;
     }
 
     header {
@@ -21,11 +20,6 @@
       text-align: center;
       padding: 3em 0;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-      position: relative;
-    }
-
-    header > p {
-      color: #d0d0d0;
     }
 
     h1 {
@@ -34,12 +28,7 @@
       color: #fff;
     }
 
-    li {
-      color: #ddd;
-    }
-
     p {
-      margin-top: 0.5em;
       font-size: 1.2em;
       color: #ddd;
     }
@@ -51,7 +40,6 @@
       padding: 2em;
       border-radius: 10px;
       box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
-      backdrop-filter: blur(10px);
     }
 
     h2 {
@@ -63,12 +51,11 @@
     ul {
       list-style-type: none;
       padding: 0;
-      color: #ddd;
     }
 
-    .project {
-      margin-bottom: 2em;
+    li {
       color: #ddd;
+      margin-bottom: 0.5em;
     }
 
     a {
@@ -91,28 +78,6 @@
       box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
     }
 
-    .translate-button {
-      display: block;
-      margin: 20px auto;
-      padding: 10px 20px;
-      background: #00c6ff;
-      color: #fff;
-      border: none;
-      cursor: pointer;
-      border-radius: 5px;
-      font-family: 'Roboto Mono', monospace;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      z-index: 1000;
-    }
-    
-    .translate-button:hover {
-      background: #0072ff;
-    }
-
     .profile-img {
       width: 150px;
       height: 150px;
@@ -120,28 +85,42 @@
       border: 5px solid #00c6ff;
       box-shadow: 0 0 15px rgba(0, 198, 255, 0.5);
       margin: 0 auto;
+      display: block;
     }
 
+    .certificates img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
+      margin-bottom: 20px;
+    }
+
+    .certificates {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 20px;
+    }
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
- <!-- <button id="translateButton" class="translate-button">Translate to Arabic</button> -->
 
   <header>
     <img src="./logoS.png" alt="Profile Picture" class="profile-img">
-    <h1 id="title">Welcome to My Website</h1>
-    <p id="author">Mohamed Khaled</p>
+    <h1>Welcome to My Portfolio</h1>
+    <p>Mohamed Khaled</p>
   </header>
 
   <section id="about">
     <h2>About Me</h2>
-    <p id="about-text">Hi, I'm Mohamed Khaled, an Egyptian passionate about creating modern and innovative ideas.</p>
+    <p>Hi, I'm Mohamed Khaled, an Egyptian passionate about creating modern and innovative ideas.</p>
   </section>
 
   <section id="skills">
     <h2>Skills</h2>
-    <ul id="skills-list">
+    <ul>
       <li>HTML</li>
       <li>CSS</li>
       <li>JavaScript</li>
@@ -156,12 +135,23 @@
   <section id="projects">
     <h2>Projects</h2>
     <div class="project">
-      <h3>Project 1: [Project Name]</h3>
-      <p>[Description of the project]</p>
+      <h3>Project 1: Portfolio Website</h3>
+      <p>Created a responsive portfolio website to showcase my projects and skills using HTML, CSS, and JavaScript.</p>
     </div>
     <div class="project">
-      <h3>Project 2: [Project Name]</h3>
-      <p>[Description of the project]</p>
+      <h3>Project 2: Python Data Analysis</h3>
+      <p>Analyzed large datasets using Python libraries and presented visual data insights.</p>
+    </div>
+  </section>
+
+  <section id="certificates">
+    <h2>Certificates</h2>
+    <div class="certificates">
+      <img src="./c.jpg" alt="Certificate 1">
+      <img src="./linux.jpg" alt="Certificate 2">
+      <img src="./cs.png" alt="Certificate 3">
+      <img src="./python.png" alt="Certificate 4">
+      <img src="./node.jpg" alt="Certificate 5">
     </div>
   </section>
 
@@ -174,45 +164,5 @@
     <p>© 2024 Mohamed Khaled. All rights reserved.</p>
   </footer>
 
- <!-- <script>
-    let isArabic = false;
-
-    document.getElementById('translateButton').addEventListener('click', function() {
-      if (!isArabic) {
-        // Translating text to Arabic
-        document.getElementById('title').textContent = 'مرحبًا بكم في موقعي';
-        document.getElementById('author').textContent = 'محمد خالد';
-        document.querySelector('#about h2').textContent = 'عني';
-        document.getElementById('about-text').textContent = 'مرحبًا، أنا محمد خالد، مصري شغوف بإنشاء أفكار حديثة ومبتكرة.';
-        document.querySelector('#skills h2').textContent = 'المهارات';
-        const skillListItems = document.querySelectorAll('#skills-list li');
-        const skillsInArabic = ['HTML', 'CSS', 'جافا سكريبت', 'NodeJS', 'بايثون', 'C', 'علوم الكمبيوتر [CS50]', 'لينكس'];
-        skillListItems.forEach((item, index) => {
-          item.textContent = skillsInArabic[index];
-        });
-        document.querySelector('#projects h2').textContent = 'المشاريع';
-        document.querySelector('#contact h2').textContent = 'اتصل بي';
-        document.querySelector('#contact p').firstChild.textContent = 'البريد الإلكتروني: ';
-        this.textContent = 'Translate to English';
-      } else {
-        // Reverting to English
-        document.getElementById('title').textContent = 'Welcome to My Website';
-        document.getElementById('author').textContent = 'Mohamed Khaled';
-        document.querySelector('#about h2').textContent = 'About Me';
-        document.getElementById('about-text').textContent = "Hi, I'm Mohamed Khaled, an Egyptian passionate about creating modern and innovative ideas.";
-        document.querySelector('#skills h2').textContent = 'Skills';
-        const skillListItems = document.querySelectorAll('#skills-list li');
-        const skillsInEnglish = ['HTML', 'CSS', 'JavaScript', 'NodeJS', 'Python', 'C', 'Computer Science [CS50]', 'Linux'];
-        skillListItems.forEach((item, index) => {
-          item.textContent = skillsInEnglish[index];
-        });
-        document.querySelector('#projects h2').textContent = 'Projects';
-        document.querySelector('#contact h2').textContent = 'Contact Me';
-        document.querySelector('#contact p').firstChild.textContent = 'Email: ';
-        this.textContent = 'Translate to Arabic';
-      }
-      isArabic = !isArabic;
-    });
-  </script> --> 
 </body>
 </html>
