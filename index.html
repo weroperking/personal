@@ -1,172 +1,210 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mohamed Khaled - Portfolio</title>
-  <link rel="icon" href="./logo.png" type="image/x-icon">
-  <style>
-    body {
-      font-family: 'Roboto Mono', monospace;
-      margin: 0;
-      padding: 0;
-      background: #000;
-      color: #eaeaea;
-    }
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+        <title>Mohamed Khaled - Portfolio</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        <style>
+            body {
+                font-family: 'Poppins', sans-serif;
+            }
+        </style>
+    </head>
+    <body class="bg-gray-900 text-white">
+        <header class="container mx-auto p-6 flex justify-between items-center fixed top-0 left-0 right-0 bg-gray-900 z-50">
+            <h1 class="text-2xl font-bold">Portfolio.</h1>
+            <nav>
+                <div class="md:hidden">
+                    <button class="text-cyan-400 focus:outline-none" id="menu-button">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+                <ul class="hidden md:flex space-x-6" id="nav-links">
+                    <li>
+                        <a class="text-cyan-400" href="#home" id="home-link">Home</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-cyan-400" href="#about" id="about-link">About</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-cyan-400" href="#skills" id="skills-link">Skills</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-cyan-400" href="#certificates" id="certificates-link">Certificates</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-cyan-400" href="#contact" id="contact-link">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="md:hidden fixed top-0 right-0 h-full w-2/3 bg-gray-800 p-6 shadow-lg transform transition-transform duration-300 translate-x-full z-50" id="mobile-nav-links">
+            <ul class="flex flex-col space-y-4">
+                <li>
+                    <a class="text-cyan-400" href="#home" id="mobile-home-link">Home</a>
+                </li>
+                <li>
+                    <a class="hover:text-cyan-400" href="#about" id="mobile-about-link">About</a>
+                </li>
+                <li>
+                    <a class="hover:text-cyan-400" href="#skills" id="mobile-skills-link">Skills</a>
+                </li>
+                <li>
+                    <a class="hover:text-cyan-400" href="#certificates" id="mobile-certificates-link">Certificates</a>
+                </li>
+                <li>
+                    <a class="hover:text-cyan-400" href="#contact" id="mobile-contact-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <main class="container mx-auto p-6 md:p-12 flex flex-col md:flex-row items-center justify-between bg-gray-800 rounded-lg shadow-lg mt-24" id="home">
+            <div class="text-center md:text-left md:w-1/2">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Hello, I'm</h2>
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Mohamed Khaled</h1>
+                <h3 class="text-2xl md:text-3xl font-semibold text-cyan-400 mb-4">
+                    <span class="text-cyan-400" id="typed"></span>
+                </h3>
+                <p class="text-gray-400 mb-6">I am a passionate developer with a knack for creating elegant solutions in the least amount of time. I have a keen interest in web development and love to create beautiful and functional websites.</p>
+            </div>
+            <div class="mt-6 md:mt-0 md:w-1/2 flex justify-center">
+                <div class="relative">
+                    <div class="absolute inset-0 bg-cyan-400 rounded-lg transform rotate-6"></div>
+                    <img alt="Portrait of Mohamed Khaled" class="relative rounded-lg shadow-lg" height="400" src="./logoS.png" width="300"/>
+                </div>
+            </div>
+        </main>
+        <section class="container mx-auto p-6 md:p-12 bg-gray-800 rounded-lg shadow-lg mt-24 hidden" id="about">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
+            <p class="text-gray-400 mb-6">Hi, I'm Mohamed Khaled, an Egyptian passionate about creating modern and innovative ideas.</p>
+        </section>
+        <section class="container mx-auto p-6 md:p-12 bg-gray-800 rounded-lg shadow-lg mt-24 hidden" id="skills">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">My Skills</h2>
+            <ul class="list-disc list-inside text-gray-400">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>NodeJS</li>
+                <li>Python</li>
+                <li>C</li>
+                <li>Computer Science [CS50]</li>
+                <li>Linux</li>
+            </ul>
+        </section>
+        <section class="container mx-auto p-6 md:p-12 bg-gray-800 rounded-lg shadow-lg mt-24 hidden" id="certificates">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">My Certificates</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <img alt="Certificate 1" class="rounded-lg shadow-lg" height="200" src="./c.jpg" width="300"/>
+                <img alt="Certificate 2" class="rounded-lg shadow-lg" height="200" src="./linux.jpg" width="300"/>
+                <img alt="Certificate 3" class="rounded-lg shadow-lg" height="200" src="./cs.png" width="300"/>
+                <img alt="Certificate 4" class="rounded-lg shadow-lg" height="200" src="./python.png" width="300"/>
+                <img alt="Certificate 5" class="rounded-lg shadow-lg" height="200" src="./node.jpg" width="300"/>
+            </div>
+        </section>
+        <section class="container mx-auto p-6 md:p-12 bg-gray-800 rounded-lg shadow-lg mt-24 hidden" id="contact">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Contact Me</h2>
+            <p class="text-gray-400 mb-6">
+                Email: <a href="mailto:weroperking@gmail.com">weroperking@gmail.com</a>
+            </p>
+            <p class="text-gray-400 mb-6">
+                Phone, WhatsApp: <a>01277707096</a>
+            </p>
+            <p class="text-gray-400 mb-6">Available only from 7PM to 9PM</p>
+            <p class="text-gray-400 mb-6">
+                If you're interested in my upcoming learning roadmap, <a href="./Roadmap.md">here it is</a>
+                .
+            </p>
+        </section>
+        <footer class="container mx-auto p-6 bg-gray-800 rounded-lg shadow-lg mt-24">
+            <p class="text-center text-gray-400">© 2024 Mohamed Khaled. All rights reserved.</p>
+        </footer>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var typed = new Typed('#typed',{
+                    strings: ["Web Developer", "Software Engineer", "Tech Enthusiast"],
+                    typeSpeed: 50,
+                    backSpeed: 50,
+                    loop: true
+                });
 
-    header {
-      background: linear-gradient(90deg, #00c6ff, #0072ff);
-      color: #fff;
-      text-align: center;
-      padding: 3em 0;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-    }
+                const navLinks = document.querySelectorAll('nav a');
+                const sections = document.querySelectorAll('section');
+                const mainSection = document.querySelector('main');
+                const menuButton = document.getElementById('menu-button');
+                const mobileNavLinks = document.getElementById('mobile-nav-links');
 
-    h1 {
-      font-size: 3em;
-      margin: 0;
-      color: #fff;
-    }
+                menuButton.addEventListener('click', function() {
+                    mobileNavLinks.classList.toggle('translate-x-full');
+                    mobileNavLinks.classList.toggle('translate-x-0');
+                });
 
-    p {
-      font-size: 1.2em;
-      color: #ddd;
-    }
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const targetId = this.getAttribute('href').substring(1);
+                        sections.forEach(section => {
+                            if (section.id === targetId) {
+                                section.classList.remove('hidden');
+                                mainSection.classList.add('hidden');
+                            } else {
+                                section.classList.add('hidden');
+                            }
+                        }
+                        );
+                        if (targetId === 'home') {
+                            mainSection.classList.remove('hidden');
+                        }
+                        navLinks.forEach(navLink => {
+                            if (navLink.getAttribute('href').substring(1) === targetId) {
+                                navLink.classList.add('text-white');
+                                navLink.classList.remove('text-cyan-400');
+                            } else {
+                                navLink.classList.remove('text-white');
+                                navLink.classList.add('text-cyan-400');
+                            }
+                        }
+                        );
+                        document.getElementById('home-link').classList.add('text-cyan-400');
+                    });
+                }
+                );
 
-    section {
-      margin: 3em auto;
-      width: 80%;
-      background: rgba(255, 255, 255, 0.1);
-      padding: 2em;
-      border-radius: 10px;
-      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
-    }
-
-    h2 {
-      color: #00c6ff;
-      border-bottom: 2px solid #0072ff;
-      padding-bottom: 0.5em;
-    }
-
-    ul {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    li {
-      color: #ddd;
-      margin-bottom: 0.5em;
-    }
-
-    a {
-      color: #00c6ff;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      background: linear-gradient(90deg, #00c6ff, #0072ff);
-      color: #fff;
-      text-align: center;
-      padding: 1.5em 0;
-      position: relative;
-      bottom: 0;
-      width: 100%;
-      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
-    }
-
-    .profile-img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      border: 5px solid #00c6ff;
-      box-shadow: 0 0 15px rgba(0, 198, 255, 0.5);
-      margin: 0 auto;
-      display: block;
-    }
-
-    .certificates img {
-      width: 100%;
-      max-width: 400px;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
-      margin-bottom: 20px;
-    }
-
-    .certificates {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      gap: 20px;
-    }
-  </style>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-
-  <header>
-    <img src="./logoS.png" alt="Profile Picture" class="profile-img">
-    <h1>Welcome to My Portfolio</h1>
-    <p>Mohamed Khaled</p>
-  </header>
-
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Hi, I'm Mohamed Khaled, an Egyptian passionate about creating modern and innovative ideas.</p>
-  </section>
-
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-      <li>NodeJS</li>
-      <li>Python</li>
-      <li>C</li>
-      <li>Computer Science [CS50]</li>
-      <li>Linux</li>
-    </ul>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>Project 1: Portfolio Website</h3>
-      <p>Created a responsive portfolio website to showcase my projects and skills using HTML, CSS, and JavaScript.</p>
-    </div>
-    <div class="project">
-      <h3>Project 2: Python Data Analysis</h3>
-      <p>Analyzed large datasets using Python libraries and presented visual data insights.</p>
-    </div>
-  </section>
-
-  <section id="certificates">
-    <h2>Certificates</h2>
-    <div class="certificates">
-      <img src="./c.jpg" alt="Certificate 1">
-      <img src="./linux.jpg" alt="Certificate 2">
-      <img src="./cs.png" alt="Certificate 3">
-      <img src="./python.png" alt="Certificate 4">
-      <img src="./node.jpg" alt="Certificate 5">
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:weroperking@gmail.com">weroperking@gmail.com</a></p>
-    <p>Phone , WhatsApp: <a>01277707096</a></p>
-    <p>available only from 7PM to 9PM </p>
-    <p>If you're interested in my upcoming learning roadmap, <a href="./Roadmap.md">here it is</a>.</p>
-
-  </section>
-
-  <footer>
-    <p>© 2024 Mohamed Khaled. All rights reserved.</p>
-  </footer>
-
-</body>
+                const mobileNavLinksArray = document.querySelectorAll('#mobile-nav-links a');
+                mobileNavLinksArray.forEach(link => {
+                    link.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const targetId = this.getAttribute('href').substring(1);
+                        sections.forEach(section => {
+                            if (section.id === targetId) {
+                                section.classList.remove('hidden');
+                                mainSection.classList.add('hidden');
+                            } else {
+                                section.classList.add('hidden');
+                            }
+                        }
+                        );
+                        if (targetId === 'home') {
+                            mainSection.classList.remove('hidden');
+                        }
+                        mobileNavLinksArray.forEach(navLink => {
+                            if (navLink.getAttribute('href').substring(1) === targetId) {
+                                navLink.classList.add('text-white');
+                                navLink.classList.remove('text-cyan-400');
+                            } else {
+                                navLink.classList.remove('text-white');
+                                navLink.classList.add('text-cyan-400');
+                            }
+                        }
+                        );
+                        document.getElementById('mobile-home-link').classList.add('text-cyan-400');
+                        mobileNavLinks.classList.add('translate-x-full');
+                        mobileNavLinks.classList.remove('translate-x-0');
+                    });
+                }
+                );
+            });
+        </script>
+    </body>
 </html>
