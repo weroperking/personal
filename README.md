@@ -85,9 +85,6 @@ Ensure you have the following:
 Feel free to reach out:
 - **Email:** [weroperking@gmail.com](mailto:weroperking@gmail.com)
 - **Outlook:** [weroperking@outlook.com](mailto:weroperking@outlook.com)
-- **Phone/WhatsApp:** 01277707096 
-- **Roadmap:** [Upcoming learning roadmap](./Roadmap.html)
-
 ---
 
 ## License
